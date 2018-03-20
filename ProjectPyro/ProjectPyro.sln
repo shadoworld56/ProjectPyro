@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjectPyro", "ProjectPyro\ProjectPyro.vcxproj", "{66184C0C-7F76-4323-93DA-6D27CB0613CC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj", "{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Debug|x64.ActiveCfg = Debug|x64
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Debug|x64.Build.0 = Debug|x64
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Debug|x86.ActiveCfg = Debug|Win32
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Debug|x86.Build.0 = Debug|Win32
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Release|x64.ActiveCfg = Release|x64
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Release|x64.Build.0 = Release|x64
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Release|x86.ActiveCfg = Release|Win32
-		{66184C0C-7F76-4323-93DA-6D27CB0613CC}.Release|x86.Build.0 = Release|Win32
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Debug|x64.ActiveCfg = Debug|x64
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Debug|x64.Build.0 = Debug|x64
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Debug|x86.ActiveCfg = Debug|Win32
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Debug|x86.Build.0 = Debug|Win32
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Release|x64.ActiveCfg = Release|x64
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Release|x64.Build.0 = Release|x64
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Release|x86.ActiveCfg = Release|Win32
+		{799A7E60-C8AB-43C8-A575-AFDC96AF51C8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
