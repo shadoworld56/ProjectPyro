@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_a4cb02fe4f7b73e09a7c4d547d8e5b78" kind="dir">
+    <compoundname>Core/Source</compoundname>
+    <innerdir refid="dir_d28b6bfb47e35561ce84259144b64322">Core/Source/Engine</innerdir>
+    <innerdir refid="dir_09f5313788705672dd13602df625ea19">Core/Source/Startup</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/Source/"/>
+  </compounddef>
+</doxygen>

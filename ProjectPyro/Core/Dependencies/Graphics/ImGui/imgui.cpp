@@ -627,10 +627,12 @@
 */
 
 #if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)
+/// <summary>	. </summary>
 #define _CRT_SECURE_NO_WARNINGS
 #endif
 
 #include "imgui.h"
+/// <summary>	. </summary>
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui_internal.h"
 
@@ -643,7 +645,9 @@
 #include <stdint.h>     // intptr_t
 #endif
 
+/// <summary>	. </summary>
 #define IMGUI_DEBUG_NAV_SCORING     0
+/// <summary>	. </summary>
 #define IMGUI_DEBUG_NAV_RECTS       0
 
 // Visual Studio warnings
@@ -756,6 +760,7 @@ static void             ImeSetInputScreenPosFn_DefaultImpl(int x, int y);
 // - Change this variable to use thread local storage. You may #define GImGui in imconfig.h for that purpose. Future development aim to make this context pointer explicit to all calls. Also read https://github.com/ocornut/imgui/issues/586
 // - Having multiple instances of the ImGui code compiled inside different namespace (easiest/safest, if you have a finite number of contexts)
 #ifndef GImGui
+/// <summary>	The im graphical user interface. </summary>
 ImGuiContext*   GImGui = NULL;
 #endif
 
@@ -763,16 +768,83 @@ ImGuiContext*   GImGui = NULL;
 // If you use DLL hotreloading you might need to call SetAllocatorFunctions() after reloading code from this file. 
 // Otherwise, you probably don't want to modify them mid-program, and if you use global/static e.g. ImVector<> instances you may need to keep them accessible during program destruction.
 #ifndef IMGUI_DISABLE_DEFAULT_ALLOCATORS
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Malloc wrapper. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="size">			The size. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///
+/// <returns>	Null if it fails, else a pointer to a void. </returns>
+///-------------------------------------------------------------------------------------------------
+
 static void*   MallocWrapper(size_t size, void* user_data)    { (void)user_data; return malloc(size); }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Free wrapper. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="ptr">			[in,out] If non-null, the pointer. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void    FreeWrapper(void* ptr, void* user_data)        { (void)user_data; free(ptr); }
 #else
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Malloc wrapper. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="size">			The size. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///
+/// <returns>	Null if it fails, else a pointer to a void. </returns>
+///-------------------------------------------------------------------------------------------------
+
 static void*   MallocWrapper(size_t size, void* user_data)    { (void)user_data; (void)size; IM_ASSERT(0); return NULL; }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Free wrapper. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="ptr">			[in,out] If non-null, the pointer. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void    FreeWrapper(void* ptr, void* user_data)        { (void)user_data; (void)ptr; IM_ASSERT(0); }
 #endif
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Im allocator allocate function. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="size">			The size. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///
+/// <returns>	Null if it fails, else a pointer to a void. </returns>
+///-------------------------------------------------------------------------------------------------
+
 static void*  (*GImAllocatorAllocFunc)(size_t size, void* user_data) = MallocWrapper;
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Im allocator free function. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="ptr">			[in,out] If non-null, the pointer. </param>
+/// <param name="user_data">	[in,out] If non-null, information describing the user. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void   (*GImAllocatorFreeFunc)(void* ptr, void* user_data) = FreeWrapper;
+/// <summary>	Information describing the im allocator user. </summary>
 static void*    GImAllocatorUserData = NULL;
+/// <summary>	Number of im allocator active allocations. </summary>
 static size_t   GImAllocatorActiveAllocationsCount = 0;
 
 //-----------------------------------------------------------------------------
@@ -2333,7 +2405,19 @@ void ImGui::NavMoveRequestCancel()
     NavUpdateAnyRequestFlag();
 }
 
-// We get there when either NavId == id, or when g.NavAnyRequest is set (which is updated by NavUpdateAnyRequestFlag above)
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	We get there when either NavId == id, or when g.NavAnyRequest is set (which is updated by
+/// 	NavUpdateAnyRequestFlag above)
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="window">	[in,out] If non-null, the window. </param>
+/// <param name="nav_bb">	The navigation bb. </param>
+/// <param name="id">	 	The identifier. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ImGui::NavProcessItem(ImGuiWindow* window, const ImRect& nav_bb, const ImGuiID id)
 {
     ImGuiContext& g = *GImGui;
@@ -2796,7 +2880,14 @@ static void NavUpdateWindowingHighlightWindow(int focus_change_dir)
     g.NavWindowingToggleLayer = false;
 }
 
-// Window management mode (hold to: change focus/move/resize, tap to: toggle menu layer)
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Window management mode (hold to: change focus/move/resize, tap to: toggle menu layer)
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
+
 static void ImGui::NavUpdateWindowing()
 {
     ImGuiContext& g = *GImGui;
@@ -2947,6 +3038,12 @@ static void NavScrollToBringItemIntoView(ImGuiWindow* window, ImRect& item_rect_
     ImVec2 next_scroll = CalcNextScrollFromScrollTargetAndClamp(window);
     item_rect_rel.Translate(window->Scroll - next_scroll);
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Navigation update. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
 
 static void ImGui::NavUpdate()
 {
@@ -3220,6 +3317,12 @@ static void ImGui::NavUpdate()
     if (g.NavWindow) { ImU32 col = (g.NavWindow->HiddenFrames <= 0) ? IM_COL32(255,0,255,255) : IM_COL32(255,0,0,255); ImVec2 p = NavCalcPreferredMousePos(); char buf[32]; ImFormatString(buf, 32, "%d", g.NavLayer); g.OverlayDrawList.AddCircleFilled(p, 3.0f, col); g.OverlayDrawList.AddText(NULL, 13.0f, p + ImVec2(8,-4), col, buf); }
 #endif
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Updates the moving window. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
 
 static void ImGui::UpdateMovingWindow()
 {
@@ -5445,7 +5548,18 @@ static ImRect GetBorderRect(ImGuiWindow* window, int border_n, float perp_paddin
     return ImRect();
 }
 
-// Handle resize for: Resize Grips, Borders, Gamepad
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Handle resize for: Resize Grips, Borders, Gamepad. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="window">				[in,out] If non-null, the window. </param>
+/// <param name="size_auto_fit">		The size automatic fit. </param>
+/// <param name="border_held">			[in,out] If non-null, the border held. </param>
+/// <param name="resize_grip_count">	Number of resize grips. </param>
+/// <param name="resize_grip_col">  	The resize grip col. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ImGui::UpdateManualResize(ImGuiWindow* window, const ImVec2& size_auto_fit, int* border_held, int resize_grip_count, ImU32 resize_grip_col[4])
 {
     ImGuiContext& g = *GImGui;
@@ -6382,6 +6496,14 @@ void ImGui::FocusWindow(ImGuiWindow* window)
     if (!(window->Flags & ImGuiWindowFlags_NoBringToFrontOnFocus))
         BringWindowToFront(window);
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Focus front most active window. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="ignore_window">	[in,out] If non-null, the ignore window. </param>
+///-------------------------------------------------------------------------------------------------
 
 void ImGui::FocusFrontMostActiveWindow(ImGuiWindow* ignore_window)
 {

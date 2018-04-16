@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -99,7 +99,8 @@
       <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d </Command>
+      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d 
+xcopy "$(SolutionDir)Assets" "$(OutDir)." /y /d  /E</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,7 +121,8 @@
       <AdditionalOptions>/verbose:lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d </Command>
+      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d 
+xcopy "$(SolutionDir)Assets" "$(OutDir)." /y /d  /E</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,7 +146,8 @@
       <AdditionalDependencies>glfw3.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d </Command>
+      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d 
+xcopy "$(SolutionDir)Assets" "$(OutDir)." /y /d  /E</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -168,7 +171,8 @@
       <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d </Command>
+      <Command>xcopy "$(ProjectDir)Dependencies\Graphics\glew-2.1.0\bin\Release\x64\*.dll" "$(OutDir)." /y /d 
+xcopy "$(SolutionDir)Assets" "$(OutDir)." /y /d  /E</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

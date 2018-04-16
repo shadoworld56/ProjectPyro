@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_mesh" kind="class" language="C++" prot="public">
+    <compoundname>Mesh</compoundname>
+    <includes refid="_mesh_8h" local="no">Mesh.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mesh_1a4c894226fa22c8a734777d6b601b8366" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Mesh::vertexArrayID_</definition>
+        <argsstring></argsstring>
+        <name>vertexArrayID_</name>
+        <briefdescription>
+<para>Identifier for the vertex array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="41" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_1a846753f93471ed902b148a51dc41b16a" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Mesh::vertexBuffer_</definition>
+        <argsstring></argsstring>
+        <name>vertexBuffer_</name>
+        <briefdescription>
+<para>Buffer for vertex data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="44" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mesh_1ae43a4eda17bf41d533aec67c0170dd0c" prot="private" static="no" mutable="no">
+        <type>GLfloat *</type>
+        <definition>GLfloat* Mesh::vertexBufferData_</definition>
+        <argsstring></argsstring>
+        <name>vertexBufferData_</name>
+        <briefdescription>
+<para>Information describing the vertex buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="47" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mesh_1a2af137f1571af89172b9c102302c416b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mesh::Mesh</definition>
+        <argsstring>()</argsstring>
+        <name>Mesh</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><hruler/>
+ </para><para>Default constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="15" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_1a5efe4da1a4c0971cfb037bd70304c303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mesh::~Mesh</definition>
+        <argsstring>()</argsstring>
+        <name>~Mesh</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="18" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_1a02a9821c2034f01baf2a532d2488cde9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mesh::Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="21" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.cpp" bodystart="22" bodyend="41"/>
+        <referencedby refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_core_8cpp" startline="17" endline="54">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_1a861cdeee95f6bbaf8d68392210a63e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Mesh::GetVAO</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetVAO</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the vao. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><heading level="2">The vao.  </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="29" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.cpp" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mesh_1a11a25c85c24c954d89ea0442c8b7b055" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Mesh::GetBuffers</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetBuffers</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the buffers. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><heading level="2">The buffers.  </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="37" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.cpp" bodystart="60" bodyend="63"/>
+        <referencedby refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_core_8cpp" startline="17" endline="54">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><hruler/>
+ </para>    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+ </para><para>A mesh. </para>    </detaileddescription>
+    <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h" line="11" column="1" bodyfile="Core/Source/Engine/Graphics/Meshes/Mesh.h" bodystart="10" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_mesh_1a11a25c85c24c954d89ea0442c8b7b055" prot="public" virt="non-virtual"><scope>Mesh</scope><name>GetBuffers</name></member>
+      <member refid="class_mesh_1a861cdeee95f6bbaf8d68392210a63e8b" prot="public" virt="non-virtual"><scope>Mesh</scope><name>GetVAO</name></member>
+      <member refid="class_mesh_1a02a9821c2034f01baf2a532d2488cde9" prot="public" virt="non-virtual"><scope>Mesh</scope><name>Init</name></member>
+      <member refid="class_mesh_1a2af137f1571af89172b9c102302c416b" prot="public" virt="non-virtual"><scope>Mesh</scope><name>Mesh</name></member>
+      <member refid="class_mesh_1a4c894226fa22c8a734777d6b601b8366" prot="private" virt="non-virtual"><scope>Mesh</scope><name>vertexArrayID_</name></member>
+      <member refid="class_mesh_1a846753f93471ed902b148a51dc41b16a" prot="private" virt="non-virtual"><scope>Mesh</scope><name>vertexBuffer_</name></member>
+      <member refid="class_mesh_1ae43a4eda17bf41d533aec67c0170dd0c" prot="private" virt="non-virtual"><scope>Mesh</scope><name>vertexBufferData_</name></member>
+      <member refid="class_mesh_1a5efe4da1a4c0971cfb037bd70304c303" prot="public" virt="non-virtual"><scope>Mesh</scope><name>~Mesh</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

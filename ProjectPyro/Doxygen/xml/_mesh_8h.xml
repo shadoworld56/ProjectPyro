@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_mesh_8h" kind="file" language="C++">
+    <compoundname>Mesh.h</compoundname>
+    <includedby refid="_mesh_8cpp" local="yes">Core/Source/Engine/Graphics/Meshes/Mesh.cpp</includedby>
+    <includedby refid="_core_8cpp" local="yes">Core/Source/Startup/Core.cpp</includedby>
+    <invincdepgraph>
+      <node id="14">
+        <label>Core/Source/Engine/Graphics/Meshes/Mesh.cpp</label>
+        <link refid="_mesh_8cpp"/>
+      </node>
+      <node id="13">
+        <label>Core/Source/Engine/Graphics/Meshes/Mesh.h</label>
+        <link refid="_mesh_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Core/Source/Startup/Core.cpp</label>
+        <link refid="_core_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mesh" prot="public">Mesh</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>file:<sp/><sp/><sp/><sp/>Source\Engine\Graphics\Meshes\Mesh.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>summary:<sp/>Declares<sp/>the<sp/>mesh<sp/>class</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_mesh" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mesh" kindref="compound">Mesh</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_1a2af137f1571af89172b9c102302c416b" kindref="member">Mesh</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mesh_1a5efe4da1a4c0971cfb037bd70304c303" kindref="member">~Mesh</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mesh_1a02a9821c2034f01baf2a532d2488cde9" kindref="member">Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>GLuint<sp/><ref refid="class_mesh_1a861cdeee95f6bbaf8d68392210a63e8b" kindref="member">GetVAO</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>GLuint<sp/><ref refid="class_mesh_1a11a25c85c24c954d89ea0442c8b7b055" kindref="member">GetBuffers</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>GLuint<sp/>vertexArrayID_;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>GLuint<sp/>vertexBuffer_;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>GLfloat<sp/>*<sp/>vertexBufferData_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Core/Source/Engine/Graphics/Meshes/Mesh.h"/>
+  </compounddef>
+</doxygen>

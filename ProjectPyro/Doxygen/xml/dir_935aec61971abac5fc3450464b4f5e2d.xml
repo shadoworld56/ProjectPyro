@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_935aec61971abac5fc3450464b4f5e2d" kind="dir">
+    <compoundname>Core/Source/Startup/Window</compoundname>
+    <innerfile refid="_window_manager_8cpp">WindowManager.cpp</innerfile>
+    <innerfile refid="_window_manager_8h">WindowManager.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/Source/Startup/Window/"/>
+  </compounddef>
+</doxygen>

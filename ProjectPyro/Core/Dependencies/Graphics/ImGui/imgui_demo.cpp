@@ -2487,8 +2487,19 @@ static void ShowExampleAppFixedOverlay(bool* p_open)
     }
 }
 
-// Demonstrate using "##" and "###" in identifiers to manipulate ID generation.
-// This apply to regular items as well. Read FAQ section "How can I have multiple widgets with the same label? Can I have widget without a label? (Yes). A primer on the purpose of labels/IDs." for details.
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Demonstrate using "##" and "###" in identifiers to manipulate ID generation. This apply
+/// 	to regular items as well. Read FAQ section "How can I have multiple widgets with the same
+/// 	label? Can I have widget without a label? (Yes). A primer on the purpose of labels/IDs."
+/// 	for details.
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="parameter1">	[in,out] If non-null, true to parameter 1. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppWindowTitles(bool*)
 {
     // By default, Windows are uniquely identified by their title.
@@ -2514,7 +2525,14 @@ static void ShowExampleAppWindowTitles(bool*)
     ImGui::End();
 }
 
-// Demonstrate using the low-level ImDrawList to draw custom shapes. 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Demonstrate using the low-level ImDrawList to draw custom shapes. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppCustomRendering(bool* p_open)
 {
     ImGui::SetNextWindowSize(ImVec2(350,560), ImGuiCond_FirstUseEver);
@@ -2616,15 +2634,29 @@ static void ShowExampleAppCustomRendering(bool* p_open)
     ImGui::End();
 }
 
-// Demonstrating creating a simple console window, with scrolling, filtering, completion and history.
-// For the console example, here we are using a more C++ like approach of declaring a class to hold the data and the functions.
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Demonstrating creating a simple console window, with scrolling, filtering, completion and
+/// 	history. For the console example, here we are using a more C++ like approach of declaring
+/// 	a class to hold the data and the functions.
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
+
 struct ExampleAppConsole
 {
+    /// <summary>	The input buf[ 256]. </summary>
     char                  InputBuf[256];
+    /// <summary>	The items. </summary>
     ImVector<char*>       Items;
+    /// <summary>	True to scroll to bottom. </summary>
     bool                  ScrollToBottom;
+    /// <summary>	The history. </summary>
     ImVector<char*>       History;
-    int                   HistoryPos;    // -1: new line, 0..History.Size-1 browsing history.
+    /// <summary>	-1: new line, 0..History.Size-1 browsing history. </summary>
+    int                   HistoryPos;
+    /// <summary>	The commands. </summary>
     ImVector<const char*> Commands;
 
     ExampleAppConsole()
@@ -2917,6 +2949,14 @@ struct ExampleAppConsole
     }
 };
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Shows the example application console. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppConsole(bool* p_open)
 {
     static ExampleAppConsole console;
@@ -2927,11 +2967,22 @@ static void ShowExampleAppConsole(bool* p_open)
 //  static ExampleAppLog my_log;
 //  my_log.AddLog("Hello %d world\n", 123);
 //  my_log.Draw("title");
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	An example application log. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
+
 struct ExampleAppLog
 {
+    /// <summary>	The buffer. </summary>
     ImGuiTextBuffer     Buf;
+    /// <summary>	Specifies the filter. </summary>
     ImGuiTextFilter     Filter;
-    ImVector<int>       LineOffsets;        // Index to lines offset
+    /// <summary>	Index to lines offset. </summary>
+    ImVector<int>       LineOffsets;
+    /// <summary>	True to scroll to bottom. </summary>
     bool                ScrollToBottom;
 
     void    Clear()     { Buf.clear(); LineOffsets.clear(); }
@@ -2987,7 +3038,14 @@ struct ExampleAppLog
     }
 };
 
-// Demonstrate creating a simple log window with basic filtering.
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Demonstrate creating a simple log window with basic filtering. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppLog(bool* p_open)
 {
     static ExampleAppLog log;
@@ -3005,7 +3063,14 @@ static void ShowExampleAppLog(bool* p_open)
     log.Draw("Example: Log", p_open);
 }
 
-// Demonstrate create a window with multiple child windows.
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Demonstrate create a window with multiple child windows. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppLayout(bool* p_open)
 {
     ImGui::SetNextWindowSize(ImVec2(500, 440), ImGuiCond_FirstUseEver);
@@ -3049,7 +3114,14 @@ static void ShowExampleAppLayout(bool* p_open)
     ImGui::End();
 }
 
-// Demonstrate create a simple property editor.
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Demonstrate create a simple property editor. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppPropertyEditor(bool* p_open)
 {
     ImGui::SetNextWindowSize(ImVec2(430,450), ImGuiCond_FirstUseEver);
@@ -3122,7 +3194,16 @@ static void ShowExampleAppPropertyEditor(bool* p_open)
     ImGui::End();
 }
 
-// Demonstrate/test rendering huge amount of text, and the incidence of clipping.
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Demonstrate/test rendering huge amount of text, and the incidence of clipping.
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="p_open">	[in,out] If non-null, true to open. </param>
+///-------------------------------------------------------------------------------------------------
+
 static void ShowExampleAppLongText(bool* p_open)
 {
     ImGui::SetNextWindowSize(ImVec2(520,600), ImGuiCond_FirstUseEver);
@@ -3179,8 +3260,32 @@ static void ShowExampleAppLongText(bool* p_open)
 // End of Demo code
 #else
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Shows the demo window. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="parameter1">	[in,out] If non-null, true to parameter 1. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShowDemoWindow(bool*) {}
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Shows the user guide. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShowUserGuide() {}
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Shows the style editor. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="parameter1">	[in,out] If non-null, the first parameter. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShowStyleEditor(ImGuiStyle*) {}
 
 #endif

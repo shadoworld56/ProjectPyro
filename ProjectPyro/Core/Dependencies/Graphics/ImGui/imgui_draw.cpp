@@ -1086,6 +1086,20 @@ void ImDrawList::AddCircleFilled(const ImVec2& centre, float radius, ImU32 col, 
     PathFillConvex(col);
 }
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds a bezier curve. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="pos0">		   	The position 0. </param>
+/// <param name="cp0">		   	The cp 0. </param>
+/// <param name="cp1">		   	The first cp. </param>
+/// <param name="pos1">		   	The first position. </param>
+/// <param name="col">		   	The col. </param>
+/// <param name="thickness">   	The thickness. </param>
+/// <param name="num_segments">	Number of segments. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImDrawList::AddBezierCurve(const ImVec2& pos0, const ImVec2& cp0, const ImVec2& cp1, const ImVec2& pos1, ImU32 col, float thickness, int num_segments)
 {
     if ((col & IM_COL32_A_MASK) == 0)
@@ -1095,6 +1109,21 @@ void ImDrawList::AddBezierCurve(const ImVec2& pos0, const ImVec2& cp0, const ImV
     PathBezierCurveTo(cp0, cp1, pos1, num_segments);
     PathStroke(col, false, thickness);
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds a text. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="font">				 	The font. </param>
+/// <param name="font_size">		 	Size of the font. </param>
+/// <param name="pos">				 	The position. </param>
+/// <param name="col">				 	The col. </param>
+/// <param name="text_begin">		 	The text begin. </param>
+/// <param name="text_end">			 	The text end. </param>
+/// <param name="wrap_width">		 	Width of the wrap. </param>
+/// <param name="cpu_fine_clip_rect">	The CPU fine clip rectangle. </param>
+///-------------------------------------------------------------------------------------------------
 
 void ImDrawList::AddText(const ImFont* font, float font_size, const ImVec2& pos, ImU32 col, const char* text_begin, const char* text_end, float wrap_width, const ImVec4* cpu_fine_clip_rect)
 {
@@ -1125,10 +1154,34 @@ void ImDrawList::AddText(const ImFont* font, float font_size, const ImVec2& pos,
     font->RenderText(this, font_size, pos, col, clip_rect, text_begin, text_end, wrap_width, cpu_fine_clip_rect != NULL);
 }
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds a text. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="pos">		 	The position. </param>
+/// <param name="col">		 	The col. </param>
+/// <param name="text_begin">	The text begin. </param>
+/// <param name="text_end">  	The text end. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImDrawList::AddText(const ImVec2& pos, ImU32 col, const char* text_begin, const char* text_end)
 {
     AddText(NULL, 0.0f, pos, col, text_begin, text_end);
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds an image. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="user_texture_id">	Identifier for the user texture. </param>
+/// <param name="a">			  	An ImVec2 to process. </param>
+/// <param name="b">			  	An ImVec2 to process. </param>
+/// <param name="uv_a">			  	The uv a. </param>
+/// <param name="uv_b">			  	The uv b. </param>
+/// <param name="col">			  	The col. </param>
+///-------------------------------------------------------------------------------------------------
 
 void ImDrawList::AddImage(ImTextureID user_texture_id, const ImVec2& a, const ImVec2& b, const ImVec2& uv_a, const ImVec2& uv_b, ImU32 col)
 {
@@ -1146,6 +1199,23 @@ void ImDrawList::AddImage(ImTextureID user_texture_id, const ImVec2& a, const Im
         PopTextureID();
 }
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds an image quad. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="user_texture_id">	Identifier for the user texture. </param>
+/// <param name="a">			  	An ImVec2 to process. </param>
+/// <param name="b">			  	An ImVec2 to process. </param>
+/// <param name="c">			  	An ImVec2 to process. </param>
+/// <param name="d">			  	An ImVec2 to process. </param>
+/// <param name="uv_a">			  	The uv a. </param>
+/// <param name="uv_b">			  	The uv b. </param>
+/// <param name="uv_c">			  	The uv c. </param>
+/// <param name="uv_d">			  	The uv d. </param>
+/// <param name="col">			  	The col. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImDrawList::AddImageQuad(ImTextureID user_texture_id, const ImVec2& a, const ImVec2& b, const ImVec2& c, const ImVec2& d, const ImVec2& uv_a, const ImVec2& uv_b, const ImVec2& uv_c, const ImVec2& uv_d, ImU32 col)
 {
     if ((col & IM_COL32_A_MASK) == 0)
@@ -1161,6 +1231,21 @@ void ImDrawList::AddImageQuad(ImTextureID user_texture_id, const ImVec2& a, cons
     if (push_texture_id)
         PopTextureID();
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Adds an image rounded. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="user_texture_id"> 	Identifier for the user texture. </param>
+/// <param name="a">			   	An ImVec2 to process. </param>
+/// <param name="b">			   	An ImVec2 to process. </param>
+/// <param name="uv_a">			   	The uv a. </param>
+/// <param name="uv_b">			   	The uv b. </param>
+/// <param name="col">			   	The col. </param>
+/// <param name="rounding">		   	The rounding. </param>
+/// <param name="rounding_corners">	The rounding corners. </param>
+///-------------------------------------------------------------------------------------------------
 
 void ImDrawList::AddImageRounded(ImTextureID user_texture_id, const ImVec2& a, const ImVec2& b, const ImVec2& uv_a, const ImVec2& uv_b, ImU32 col, float rounding, int rounding_corners)
 {
@@ -1191,7 +1276,16 @@ void ImDrawList::AddImageRounded(ImTextureID user_texture_id, const ImVec2& a, c
 // ImDrawData
 //-----------------------------------------------------------------------------
 
-// For backward compatibility: convert all buffers from indexed to de-indexed, in case you cannot render indexed. Note: this is slow and most likely a waste of resources. Always prefer indexed rendering!
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	For backward compatibility: convert all buffers from indexed to de-indexed, in case you
+/// 	cannot render indexed. Note: this is slow and most likely a waste of resources. Always
+/// 	prefer indexed rendering!
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///-------------------------------------------------------------------------------------------------
+
 void ImDrawData::DeIndexAllBuffers()
 {
     ImVector<ImDrawVert> new_vtx_buffer;
@@ -1210,7 +1304,18 @@ void ImDrawData::DeIndexAllBuffers()
     }
 }
 
-// Helper to scale the ClipRect field of each ImDrawCmd. Use if your final output buffer is at a different scale than ImGui expects, or if there is a difference between your window resolution and framebuffer resolution.
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Helper to scale the ClipRect field of each ImDrawCmd. Use if your final output buffer is
+/// 	at a different scale than ImGui expects, or if there is a difference between your window
+/// 	resolution and framebuffer resolution.
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="scale">	The scale. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImDrawData::ScaleClipRects(const ImVec2& scale)
 {
     for (int i = 0; i < CmdListsCount; i++)
@@ -1228,7 +1333,19 @@ void ImDrawData::ScaleClipRects(const ImVec2& scale)
 // Shade functions
 //-----------------------------------------------------------------------------
 
-// Generic linear color gradient, write to RGB fields, leave A untouched.
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Generic linear color gradient, write to RGB fields, leave A untouched. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="vert_start"> 	[in,out] If non-null, the vertical start. </param>
+/// <param name="vert_end">   	[in,out] If non-null, the vertical end. </param>
+/// <param name="gradient_p0">	The gradient p 0. </param>
+/// <param name="gradient_p1">	The first gradient p. </param>
+/// <param name="col0">		  	The col 0. </param>
+/// <param name="col1">		  	The first col. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShadeVertsLinearColorGradientKeepAlpha(ImDrawVert* vert_start, ImDrawVert* vert_end, ImVec2 gradient_p0, ImVec2 gradient_p1, ImU32 col0, ImU32 col1)
 {
     ImVec2 gradient_extent = gradient_p1 - gradient_p0;
@@ -1244,7 +1361,21 @@ void ImGui::ShadeVertsLinearColorGradientKeepAlpha(ImDrawVert* vert_start, ImDra
     }
 }
 
-// Scan and shade backward from the end of given vertices. Assume vertices are text only (= vert_start..vert_end going left to right) so we can break as soon as we are out the gradient bounds.
+///-------------------------------------------------------------------------------------------------
+/// <summary>
+/// 	Scan and shade backward from the end of given vertices. Assume vertices are text only (=
+/// 	vert_start..vert_end going left to right) so we can break as soon as we are out the
+/// 	gradient bounds.
+/// </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="vert_start">   	[in,out] If non-null, the vertical start. </param>
+/// <param name="vert_end">			[in,out] If non-null, the vertical end. </param>
+/// <param name="gradient_p0_x">	The gradient p 0 x coordinate. </param>
+/// <param name="gradient_p1_x">	The gradient p 1 x coordinate. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShadeVertsLinearAlphaGradientForLeftToRightText(ImDrawVert* vert_start, ImDrawVert* vert_end, float gradient_p0_x, float gradient_p1_x)
 {
     float gradient_extent_x = gradient_p1_x - gradient_p0_x;
@@ -1261,7 +1392,20 @@ void ImGui::ShadeVertsLinearAlphaGradientForLeftToRightText(ImDrawVert* vert_sta
     }
 }
 
-// Distribute UV over (a, b) rectangle
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Distribute UV over (a, b) rectangle. </summary>
+///
+/// <remarks>	Coast, 3/20/2018. </remarks>
+///
+/// <param name="vert_start">	[in,out] If non-null, the vertical start. </param>
+/// <param name="vert_end">  	[in,out] If non-null, the vertical end. </param>
+/// <param name="a">		 	An ImVec2 to process. </param>
+/// <param name="b">		 	An ImVec2 to process. </param>
+/// <param name="uv_a">		 	The uv a. </param>
+/// <param name="uv_b">		 	The uv b. </param>
+/// <param name="clamp">	 	True to clamp. </param>
+///-------------------------------------------------------------------------------------------------
+
 void ImGui::ShadeVertsLinearUV(ImDrawVert* vert_start, ImDrawVert* vert_end, const ImVec2& a, const ImVec2& b, const ImVec2& uv_a, const ImVec2& uv_b, bool clamp)
 {
     const ImVec2 size = b - a;

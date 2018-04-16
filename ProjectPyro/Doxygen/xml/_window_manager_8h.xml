@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_window_manager_8h" kind="file" language="C++">
+    <compoundname>WindowManager.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="_core_8cpp" local="yes">Core/Source/Startup/Core.cpp</includedby>
+    <includedby refid="_window_manager_8cpp" local="yes">Core/Source/Startup/Window/WindowManager.cpp</includedby>
+    <incdepgraph>
+      <node id="77">
+        <label>string</label>
+      </node>
+      <node id="76">
+        <label>Core/Source/Startup/Window/WindowManager.h</label>
+        <link refid="_window_manager_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="80">
+        <label>Core/Source/Startup/Window/WindowManager.cpp</label>
+        <link refid="_window_manager_8cpp"/>
+      </node>
+      <node id="78">
+        <label>Core/Source/Startup/Window/WindowManager.h</label>
+        <link refid="_window_manager_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>Core/Source/Startup/Core.cpp</label>
+        <link refid="_core_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_window_manager" prot="public">WindowManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>file:<sp/><sp/><sp/><sp/>Source\Startup\Window\WindowManager.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>summary:<sp/>Declares<sp/>the<sp/>window<sp/>manager<sp/>class</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_window_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_window_manager" kindref="compound">WindowManager</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_window_manager_1a3a283b34c19aaa20296befaabad4d29b" kindref="member">WindowManager</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_window_manager_1a19fd6e41c42760af82460d9851780d82" kindref="member">~WindowManager</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_window_manager_1acc25a22a88b12463ca20722faa0ad700" kindref="member">InitMainWindow</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/>std::string<sp/>title);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_window_manager_1abb5368b5020234593cce7c2fe665b0f7" kindref="member">UpdateMainWindow</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_window_manager_1a565fbbf0fdd0683ba35467e3d4e5965f" kindref="member">ShutdownMainWindow</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>GLFWwindow<sp/>*<sp/><ref refid="class_window_manager_1a89a767f4c3a1fd248cad0a2b560420b7" kindref="member">GetMainWindow</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>GLFWwindow<sp/>*<sp/>mainWindow_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Core/Source/Startup/Window/WindowManager.h"/>
+  </compounddef>
+</doxygen>

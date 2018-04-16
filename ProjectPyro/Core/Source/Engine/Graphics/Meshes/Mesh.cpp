@@ -1,17 +1,24 @@
+///-------------------------------------------------------------------------------------------------
+// file:	Source\Engine\Graphics\Meshes\Mesh.cpp
+//
+// summary:	Implements the mesh class
+///-------------------------------------------------------------------------------------------------
+
 #include "stdafx.h"
 #include "Mesh.h"
 
-
+/// <summary>	Default constructor. </summary>
 Mesh::Mesh()
 	: vertexArrayID_(0), vertexBuffer_(0), vertexBufferData_(nullptr)
 {
 }
 
-
+/// <summary>	Destructor. </summary>
 Mesh::~Mesh()
 {
 }
 
+/// <summary>	Initializes this object. </summary>
 void Mesh::Init()
 {
 	static const GLfloat g_vertex_buffer_data[] = {
@@ -33,10 +40,22 @@ void Mesh::Init()
 
 }
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Gets the vao. </summary>
+///
+/// <returns>	The vao. </returns>
+///-------------------------------------------------------------------------------------------------
+
 GLuint Mesh::GetVAO()
 {
 	return vertexArrayID_;
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Gets the buffers. </summary>
+///
+/// <returns>	The buffers. </returns>
+///-------------------------------------------------------------------------------------------------
 
 GLuint Mesh::GetBuffers()
 {

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_window_manager" kind="class" language="C++" prot="public">
+    <compoundname>WindowManager</compoundname>
+    <includes refid="_window_manager_8h" local="no">WindowManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_window_manager_1a2a5237ca2d2ff1c10bc4ff93a2fc58f3" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* WindowManager::mainWindow_</definition>
+        <argsstring></argsstring>
+        <name>mainWindow_</name>
+        <briefdescription>
+<para>The main window. </para>        </briefdescription>
+        <detaileddescription>
+<para>The main window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="56" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_window_manager_1a3a283b34c19aaa20296befaabad4d29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WindowManager::WindowManager</definition>
+        <argsstring>()</argsstring>
+        <name>WindowManager</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><hruler/>
+ </para><para>Default constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="17" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_manager_1a19fd6e41c42760af82460d9851780d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WindowManager::~WindowManager</definition>
+        <argsstring>()</argsstring>
+        <name>~WindowManager</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="20" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_window_manager_1acc25a22a88b12463ca20722faa0ad700" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WindowManager::InitMainWindow</definition>
+        <argsstring>(int width, int height, std::string title)</argsstring>
+        <name>InitMainWindow</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the main window. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para><para><heading level="2">True if it succeeds, false if it fails.  </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="32" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="30" bodyend="66"/>
+        <referencedby refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_core_8cpp" startline="17" endline="54">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_window_manager_1abb5368b5020234593cce7c2fe665b0f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool WindowManager::UpdateMainWindow</definition>
+        <argsstring>(void)</argsstring>
+        <name>UpdateMainWindow</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Updates the main window. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><heading level="2">True if it succeeds, false if it fails.  </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="40" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="74" bodyend="84"/>
+        <referencedby refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_core_8cpp" startline="17" endline="54">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_window_manager_1a565fbbf0fdd0683ba35467e3d4e5965f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WindowManager::ShutdownMainWindow</definition>
+        <argsstring>(void)</argsstring>
+        <name>ShutdownMainWindow</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Shutdown main window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="43" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="87" bodyend="91"/>
+        <referencedby refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_core_8cpp" startline="17" endline="54">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_window_manager_1a89a767f4c3a1fd248cad0a2b560420b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow * WindowManager::GetMainWindow</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetMainWindow</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets main window. </para>        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+</para><para><heading level="2">Null if it fails, else the main window.  </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Core/Source/Startup/Window/WindowManager.h" line="51" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><hruler/>
+ </para>    </briefdescription>
+    <detaileddescription>
+<para><hruler/>
+ </para><para>Manager for windows. </para>    </detaileddescription>
+    <location file="Core/Source/Startup/Window/WindowManager.h" line="13" column="1" bodyfile="Core/Source/Startup/Window/WindowManager.h" bodystart="12" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_window_manager_1a89a767f4c3a1fd248cad0a2b560420b7" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>GetMainWindow</name></member>
+      <member refid="class_window_manager_1acc25a22a88b12463ca20722faa0ad700" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>InitMainWindow</name></member>
+      <member refid="class_window_manager_1a2a5237ca2d2ff1c10bc4ff93a2fc58f3" prot="private" virt="non-virtual"><scope>WindowManager</scope><name>mainWindow_</name></member>
+      <member refid="class_window_manager_1a565fbbf0fdd0683ba35467e3d4e5965f" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>ShutdownMainWindow</name></member>
+      <member refid="class_window_manager_1abb5368b5020234593cce7c2fe665b0f7" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>UpdateMainWindow</name></member>
+      <member refid="class_window_manager_1a3a283b34c19aaa20296befaabad4d29b" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>WindowManager</name></member>
+      <member refid="class_window_manager_1a19fd6e41c42760af82460d9851780d82" prot="public" virt="non-virtual"><scope>WindowManager</scope><name>~WindowManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

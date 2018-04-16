@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_7dd649907eb6d3eefa17ef7f77feefd5" kind="dir">
+    <compoundname>Core/Source/Engine/Graphics/Meshes</compoundname>
+    <innerfile refid="_mesh_8cpp">Mesh.cpp</innerfile>
+    <innerfile refid="_mesh_8h">Mesh.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Core/Source/Engine/Graphics/Meshes/"/>
+  </compounddef>
+</doxygen>

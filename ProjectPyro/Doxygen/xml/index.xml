@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_mesh" kind="class"><name>Mesh</name>
+    <member refid="class_mesh_1a4c894226fa22c8a734777d6b601b8366" kind="variable"><name>vertexArrayID_</name></member>
+    <member refid="class_mesh_1a846753f93471ed902b148a51dc41b16a" kind="variable"><name>vertexBuffer_</name></member>
+    <member refid="class_mesh_1ae43a4eda17bf41d533aec67c0170dd0c" kind="variable"><name>vertexBufferData_</name></member>
+    <member refid="class_mesh_1a2af137f1571af89172b9c102302c416b" kind="function"><name>Mesh</name></member>
+    <member refid="class_mesh_1a5efe4da1a4c0971cfb037bd70304c303" kind="function"><name>~Mesh</name></member>
+    <member refid="class_mesh_1a02a9821c2034f01baf2a532d2488cde9" kind="function"><name>Init</name></member>
+    <member refid="class_mesh_1a861cdeee95f6bbaf8d68392210a63e8b" kind="function"><name>GetVAO</name></member>
+    <member refid="class_mesh_1a11a25c85c24c954d89ea0442c8b7b055" kind="function"><name>GetBuffers</name></member>
+  </compound>
+  <compound refid="class_window_manager" kind="class"><name>WindowManager</name>
+    <member refid="class_window_manager_1a2a5237ca2d2ff1c10bc4ff93a2fc58f3" kind="variable"><name>mainWindow_</name></member>
+    <member refid="class_window_manager_1a3a283b34c19aaa20296befaabad4d29b" kind="function"><name>WindowManager</name></member>
+    <member refid="class_window_manager_1a19fd6e41c42760af82460d9851780d82" kind="function"><name>~WindowManager</name></member>
+    <member refid="class_window_manager_1acc25a22a88b12463ca20722faa0ad700" kind="function"><name>InitMainWindow</name></member>
+    <member refid="class_window_manager_1abb5368b5020234593cce7c2fe665b0f7" kind="function"><name>UpdateMainWindow</name></member>
+    <member refid="class_window_manager_1a565fbbf0fdd0683ba35467e3d4e5965f" kind="function"><name>ShutdownMainWindow</name></member>
+    <member refid="class_window_manager_1a89a767f4c3a1fd248cad0a2b560420b7" kind="function"><name>GetMainWindow</name></member>
+  </compound>
+  <compound refid="_mesh_8cpp" kind="file"><name>Mesh.cpp</name>
+  </compound>
+  <compound refid="_mesh_8h" kind="file"><name>Mesh.h</name>
+  </compound>
+  <compound refid="_core_8cpp" kind="file"><name>Core.cpp</name>
+    <member refid="_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="stdafx_8cpp" kind="file"><name>stdafx.cpp</name>
+  </compound>
+  <compound refid="stdafx_8h" kind="file"><name>stdafx.h</name>
+  </compound>
+  <compound refid="targetver_8h" kind="file"><name>targetver.h</name>
+  </compound>
+  <compound refid="_window_manager_8cpp" kind="file"><name>WindowManager.cpp</name>
+  </compound>
+  <compound refid="_window_manager_8h" kind="file"><name>WindowManager.h</name>
+  </compound>
+  <compound refid="dir_c6310732a22f63c0c2fc5595561e68f1" kind="dir"><name>Core</name>
+  </compound>
+  <compound refid="dir_d28b6bfb47e35561ce84259144b64322" kind="dir"><name>Core/Source/Engine</name>
+  </compound>
+  <compound refid="dir_6457b117975bde367f4e8f3bdabf3854" kind="dir"><name>Core/Source/Engine/Graphics</name>
+  </compound>
+  <compound refid="dir_7dd649907eb6d3eefa17ef7f77feefd5" kind="dir"><name>Core/Source/Engine/Graphics/Meshes</name>
+  </compound>
+  <compound refid="dir_a4cb02fe4f7b73e09a7c4d547d8e5b78" kind="dir"><name>Core/Source</name>
+  </compound>
+  <compound refid="dir_09f5313788705672dd13602df625ea19" kind="dir"><name>Core/Source/Startup</name>
+  </compound>
+  <compound refid="dir_935aec61971abac5fc3450464b4f5e2d" kind="dir"><name>Core/Source/Startup/Window</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="stdafx_8h" kind="file" language="C++">
+    <compoundname>stdafx.h</compoundname>
+    <includes refid="targetver_8h" local="yes">targetver.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">tchar.h</includes>
+    <includes local="no">glew.h</includes>
+    <includes local="no">glfw3.h</includes>
+    <includes local="no">glm/glm.hpp</includes>
+    <includedby refid="_mesh_8cpp" local="yes">Core/Source/Engine/Graphics/Meshes/Mesh.cpp</includedby>
+    <includedby refid="_core_8cpp" local="yes">Core/Source/Startup/Core.cpp</includedby>
+    <includedby refid="stdafx_8cpp" local="yes">Core/Source/Startup/stdafx.cpp</includedby>
+    <includedby refid="_window_manager_8cpp" local="no">Core/Source/Startup/Window/WindowManager.cpp</includedby>
+    <incdepgraph>
+      <node id="41">
+        <label>Core/Source/Startup/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>stdlib.h</label>
+      </node>
+      <node id="43">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="42">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>glew.h</label>
+      </node>
+      <node id="46">
+        <label>tchar.h</label>
+      </node>
+      <node id="48">
+        <label>glfw3.h</label>
+      </node>
+      <node id="44">
+        <label>stdio.h</label>
+      </node>
+      <node id="49">
+        <label>glm/glm.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="50">
+        <label>Core/Source/Startup/stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Core/Source/Engine/Graphics/Meshes/Mesh.cpp</label>
+        <link refid="_mesh_8cpp"/>
+      </node>
+      <node id="54">
+        <label>Core/Source/Startup/Window/WindowManager.cpp</label>
+        <link refid="_window_manager_8cpp"/>
+      </node>
+      <node id="53">
+        <label>Core/Source/Startup/stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="52">
+        <label>Core/Source/Startup/Core.cpp</label>
+        <link refid="_core_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.h<sp/>:<sp/>include<sp/>file<sp/>for<sp/>standard<sp/>system<sp/>include<sp/>files,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>project<sp/>specific<sp/>include<sp/>files<sp/>that<sp/>are<sp/>used<sp/>frequently,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>are<sp/>changed<sp/>infrequently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="targetver_8h" kindref="compound">targetver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>comment(lib,<sp/>&quot;opengl32.lib&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/glm.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>reference<sp/>additional<sp/>headers<sp/>your<sp/>program<sp/>requires<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Core/Source/Startup/stdafx.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+\hypertarget{class_window_manager}{}\section{Window\+Manager Class Reference}
+\label{class_window_manager}\index{Window\+Manager@{Window\+Manager}}
+
+
+
+
+  
+
+
+
+
+{\ttfamily \#include $<$Window\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_window_manager_a3a283b34c19aaa20296befaabad4d29b}{Window\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window_manager_a19fd6e41c42760af82460d9851780d82}{$\sim$\+Window\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_manager_acc25a22a88b12463ca20722faa0ad700}{Init\+Main\+Window}} (int width, int height, std\+::string title)
+\begin{DoxyCompactList}\small\item\em Initializes the main window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_manager_abb5368b5020234593cce7c2fe665b0f7}{Update\+Main\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Updates the main window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_manager_a565fbbf0fdd0683ba35467e3d4e5965f}{Shutdown\+Main\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Shutdown main window. \end{DoxyCompactList}\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{class_window_manager_a89a767f4c3a1fd248cad0a2b560420b7}{Get\+Main\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Gets main window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+ 
+
+
+
+ 
+
+Manager for windows. 
+
+Definition at line 12 of file Window\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_window_manager_a3a283b34c19aaa20296befaabad4d29b}\label{class_window_manager_a3a283b34c19aaa20296befaabad4d29b}} 
+\index{Window\+Manager@{Window\+Manager}!Window\+Manager@{Window\+Manager}}
+\index{Window\+Manager@{Window\+Manager}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{Window\+Manager()}{WindowManager()}}
+{\footnotesize\ttfamily Window\+Manager\+::\+Window\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+
+
+
+
+
+ 
+
+Default constructor. 
+
+Definition at line 11 of file Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_window_manager_a19fd6e41c42760af82460d9851780d82}\label{class_window_manager_a19fd6e41c42760af82460d9851780d82}} 
+\index{Window\+Manager@{Window\+Manager}!````~Window\+Manager@{$\sim$\+Window\+Manager}}
+\index{````~Window\+Manager@{$\sim$\+Window\+Manager}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Window\+Manager()}{~WindowManager()}}
+{\footnotesize\ttfamily Window\+Manager\+::$\sim$\+Window\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 16 of file Window\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_window_manager_a89a767f4c3a1fd248cad0a2b560420b7}\label{class_window_manager_a89a767f4c3a1fd248cad0a2b560420b7}} 
+\index{Window\+Manager@{Window\+Manager}!Get\+Main\+Window@{Get\+Main\+Window}}
+\index{Get\+Main\+Window@{Get\+Main\+Window}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Main\+Window()}{GetMainWindow()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ Window\+Manager\+::\+Get\+Main\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets main window. 
+
+
+
+
+
+\subsubsection*{Null if it fails, else the main window.  }
+
+Definition at line 99 of file Window\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_window_manager_acc25a22a88b12463ca20722faa0ad700}\label{class_window_manager_acc25a22a88b12463ca20722faa0ad700}} 
+\index{Window\+Manager@{Window\+Manager}!Init\+Main\+Window@{Init\+Main\+Window}}
+\index{Init\+Main\+Window@{Init\+Main\+Window}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{Init\+Main\+Window()}{InitMainWindow()}}
+{\footnotesize\ttfamily bool Window\+Manager\+::\+Init\+Main\+Window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{std\+::string}]{title }\end{DoxyParamCaption})}
+
+
+
+Initializes the main window. 
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width. \\
+\hline
+{\em height} & The height. \\
+\hline
+{\em title} & The title. \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection*{True if it succeeds, false if it fails.  }
+
+Definition at line 30 of file Window\+Manager.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{class_window_manager_a565fbbf0fdd0683ba35467e3d4e5965f}\label{class_window_manager_a565fbbf0fdd0683ba35467e3d4e5965f}} 
+\index{Window\+Manager@{Window\+Manager}!Shutdown\+Main\+Window@{Shutdown\+Main\+Window}}
+\index{Shutdown\+Main\+Window@{Shutdown\+Main\+Window}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{Shutdown\+Main\+Window()}{ShutdownMainWindow()}}
+{\footnotesize\ttfamily void Window\+Manager\+::\+Shutdown\+Main\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Shutdown main window. 
+
+
+
+Definition at line 87 of file Window\+Manager.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_window_manager_abb5368b5020234593cce7c2fe665b0f7}\label{class_window_manager_abb5368b5020234593cce7c2fe665b0f7}} 
+\index{Window\+Manager@{Window\+Manager}!Update\+Main\+Window@{Update\+Main\+Window}}
+\index{Update\+Main\+Window@{Update\+Main\+Window}!Window\+Manager@{Window\+Manager}}
+\subsubsection{\texorpdfstring{Update\+Main\+Window()}{UpdateMainWindow()}}
+{\footnotesize\ttfamily bool Window\+Manager\+::\+Update\+Main\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates the main window. 
+
+
+
+
+
+\subsubsection*{True if it succeeds, false if it fails.  }
+
+Definition at line 74 of file Window\+Manager.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Core/\+Source/\+Startup/\+Window/\mbox{\hyperlink{_window_manager_8h}{Window\+Manager.\+h}}\item 
+Core/\+Source/\+Startup/\+Window/\mbox{\hyperlink{_window_manager_8cpp}{Window\+Manager.\+cpp}}\end{DoxyCompactItemize}

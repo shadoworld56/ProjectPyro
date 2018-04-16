@@ -1,0 +1,126 @@
+.TH "WindowManager" 3 "Tue Mar 20 2018" "Project: Pyro" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WindowManager \- 
+.PP
+  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <WindowManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWindowManager\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fB~WindowManager\fP ()"
+.br
+.RI "Destructor\&. "
+.ti -1c
+.RI "bool \fBInitMainWindow\fP (int width, int height, std::string title)"
+.br
+.RI "Initializes the main window\&. "
+.ti -1c
+.RI "bool \fBUpdateMainWindow\fP (void)"
+.br
+.RI "Updates the main window\&. "
+.ti -1c
+.RI "void \fBShutdownMainWindow\fP (void)"
+.br
+.RI "Shutdown main window\&. "
+.ti -1c
+.RI "GLFWwindow * \fBGetMainWindow\fP (void)"
+.br
+.RI "Gets main window\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+ 
+
+
+.PP
+ 
+.PP
+Manager for windows\&. 
+.PP
+Definition at line 12 of file WindowManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "WindowManager::WindowManager ()"
+
+.PP
+Default constructor\&. 
+.PP
+.PP
+.PP
+ 
+.PP
+Default constructor\&. 
+.PP
+Definition at line 11 of file WindowManager\&.cpp\&.
+.SS "WindowManager::~WindowManager ()"
+
+.PP
+Destructor\&. 
+.PP
+Definition at line 16 of file WindowManager\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GLFWwindow * WindowManager::GetMainWindow (void)"
+
+.PP
+Gets main window\&. 
+.PP
+.PP
+.SS "Null if it fails, else the main window\&.  "
+
+.PP
+Definition at line 99 of file WindowManager\&.cpp\&.
+.SS "bool WindowManager::InitMainWindow (int width, int height, std::string title)"
+
+.PP
+Initializes the main window\&. 
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwidth\fP The width\&. 
+.br
+\fIheight\fP The height\&. 
+.br
+\fItitle\fP The title\&. 
+.RE
+.PP
+.PP
+.SS "True if it succeeds, false if it fails\&.  "
+
+.PP
+Definition at line 30 of file WindowManager\&.cpp\&.
+.SS "void WindowManager::ShutdownMainWindow (void)"
+
+.PP
+Shutdown main window\&. 
+.PP
+Definition at line 87 of file WindowManager\&.cpp\&.
+.SS "bool WindowManager::UpdateMainWindow (void)"
+
+.PP
+Updates the main window\&. 
+.PP
+.PP
+.SS "True if it succeeds, false if it fails\&.  "
+
+.PP
+Definition at line 74 of file WindowManager\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Project: Pyro from the source code\&.

@@ -1,15 +1,31 @@
+///-------------------------------------------------------------------------------------------------
+// file:	Source\Startup\Window\WindowManager.cpp
+//
+// summary:	Implements the window manager class
+///-------------------------------------------------------------------------------------------------
+
 #include <stdafx.h>
 #include "WindowManager.h"
 
-
+/// <summary>	Default constructor. </summary>
 WindowManager::WindowManager()
 {
 }
 
-
+/// <summary>	Destructor. </summary>
 WindowManager::~WindowManager()
 {
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Initializes the main window. </summary>
+///
+/// <param name="width"> 	The width. </param>
+/// <param name="height">	The height. </param>
+/// <param name="title"> 	The title. </param>
+///
+/// <returns>	True if it succeeds, false if it fails. </returns>
+///-------------------------------------------------------------------------------------------------
 
 bool WindowManager::InitMainWindow(int width, int height, std::string title)
 {
@@ -49,6 +65,12 @@ bool WindowManager::InitMainWindow(int width, int height, std::string title)
 	return true;
 }
 
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Updates the main window. </summary>
+///
+/// <returns>	True if it succeeds, false if it fails. </returns>
+///-------------------------------------------------------------------------------------------------
+
 bool WindowManager::UpdateMainWindow()
 {
 	if(!glfwWindowShouldClose(mainWindow_))
@@ -61,11 +83,18 @@ bool WindowManager::UpdateMainWindow()
 	return false;
 }
 
+/// <summary>	Shutdown main window. </summary>
 void WindowManager::ShutdownMainWindow()
 {
 	glfwDestroyWindow(mainWindow_);
 	glfwTerminate();
 }
+
+///-------------------------------------------------------------------------------------------------
+/// <summary>	Gets main window. </summary>
+///
+/// <returns>	Null if it fails, else the main window. </returns>
+///-------------------------------------------------------------------------------------------------
 
 GLFWwindow* WindowManager::GetMainWindow()
 {

@@ -1,0 +1,9 @@
+digraph "Core/Source/Startup/Window" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_09f5313788705672dd13602df625ea19 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Startup" fontname="Helvetica", fontsize="10", URL="dir_09f5313788705672dd13602df625ea19.html"]
+  dir_935aec61971abac5fc3450464b4f5e2d [shape=box, label="Window", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_935aec61971abac5fc3450464b4f5e2d.html"];
+  }
+}
